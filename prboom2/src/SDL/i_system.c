@@ -165,7 +165,7 @@ unsigned long I_GetRandomTimeSeed(void)
  */
 const char* I_GetVersionString(char* buf, size_t sz)
 {
-  snprintf(buf, sz, "%s (https://github.com/andrikpowell/nyan-doom/)", PROJECT_STRING);
+  snprintf(buf, sz, "%s (https://github.com/CoderPenguin1-dev/penguino-doom/)", PROJECT_STRING);
   return buf;
 }
 
@@ -373,16 +373,16 @@ const char *I_ConfigDir(void)
     const char *home = I_GetHomeDir();
 
     // First, try legacy directory.
-    base = dsda_ConcatDir(home, ".nyan-doom");
+    base = dsda_ConcatDir(home, ".penguino-doom");
     if (access(base, F_OK) != 0)
     {
       // Legacy directory is not accessible. Use XDG directory.
       Z_Free(base);
 
 #ifdef __APPLE__
-      base = dsda_ConcatDir(home, "Library/Application Support/nyan-doom");
+      base = dsda_ConcatDir(home, "Library/Application Support/penguino-doom");
 #else
-      base = dsda_ConcatDir(I_GetXDGDataHome(), "nyan-doom");
+      base = dsda_ConcatDir(I_GetXDGDataHome(), "penguino-doom");
 #endif
     }
 
@@ -484,7 +484,7 @@ char* I_FindFileInternal(const char* wfname, const char* ext, dboolean isStatic)
     {NULL}, // current working directory
     {NULL, NULL, "DOOMWADDIR"}, // run-time $DOOMWADDIR
     {DOOMWADDIR}, // build-time configured DOOMWADDIR
-    {NYAN_ABSOLUTE_PWAD_PATH}, // build-time configured absolute path to nyan-doom.wad
+    {PENGUINO_ABSOLUTE_PWAD_PATH}, // build-time configured absolute path to penguino-doom.wad
     {NULL, NULL, NULL, I_GetBasePath}, // search the base path provided by SDL
     {NULL, "../share/games/doom", NULL, I_GetBasePath}, // AppImage
     {NULL, "doom", "HOME"}, // ~/doom

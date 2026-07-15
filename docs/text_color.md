@@ -1,8 +1,6 @@
 ## Text Color Configuration
 
-Text Color configurations are *no longer* stored in the NYANTC lump.
-
-You can access them in-game under `Options > Display > Colors` which are then saved in `nyan-doom.cfg`.
+You can access them in-game under `Options > Display > Colors` which are then saved in `penguino-doom.cfg`.
 
 ### Config Specification
 
@@ -15,19 +13,19 @@ Various elements of the extended hud, the automap, and the menus can be changed.
 The number values are tied to the following color ranges:
 
 | Color Range | Color Index |
-| ----------- | ------|
-| default (untranslated)     | 0     |
-| brick       | 1     |
-| tan         | 2     |
-| gray        | 3     |
-| green       | 4     |
-| brown       | 5     |
-| gold        | 6     |
-| red         | 7     |
-| blue        | 8     |
-| orange      | 9     |
-| yellow      | 10    |
-| light blue  | 11    |
-| black       | 12    |
-| purple      | 13    |
-| white       | 14    |
+| ----------- | ------------|
+| default     | 0           |
+| brick       | 1           |
+| tan         | 2           |
+| gray        | 3           |
+| green       | 4           |
+| brown       | 5           |
+| gold        | 6           |
+| red         | 7           |
+| blue        | 8           |
+| orange      | 9           |
+| yellow      | 10          |
+| light blue  | 11          |
+| black       | 12          |
+| purple      | 13          |
+| white       | 14          |

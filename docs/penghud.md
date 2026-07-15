@@ -1,12 +1,13 @@
 ## HUD Configuration
 
-HUD configurations are stored in the NYANHUD lump. These defaults can be changed by replacing the lump or specifying a hud config file with `-hud filename`. There are separate configurations for each game (doom, heretic, and hexen), with or without the status bar.
+HUD configurations are stored in the PENGHUD lump. These defaults can be changed by replacing the lump or specifying a hud config file with `-hud filename`. There are separate configurations for each game (doom, heretic, and hexen), with or without the status bar.
 
-NYANHUD is very similar to DSDAHUD, but does include extra widgets, thus is incompatible with DSDA-Doom.
+PENGHUD is very similar to NYANHUD, and in turn is very similar to DSDAHUD. However, some changes made from both here and Nyan Doom make it incompatible with either.
 
-Multiple NYANHUD lumps can be stacked similar to UMAPINFO or DEHACKED. Note that the entire hud blocks will be replaced by the most recent version. This also applies to the `full` variants.
+Multiple PENGHUD lumps can be stacked similar to UMAPINFO or DEHACKED. Note that the entire hud blocks will be replaced by the most recent version. This also applies to the `full` variants.
 
 Options marked with 😸 are Nyan exclusive.
+Options marked with 🐧 are Penguino exclusive.
 
 ## Specification
 
@@ -55,7 +56,7 @@ Finally, there is a positioning helper: `add_offset y alignment`
 - This compensates for mixed stretching between the message font and the extended hud font
 - Set `y` as the number of message font component lines at the edge of the given alignment
 
-You can find the current default configuration [here](../prboom2/data/lumps/nyanhud.lmp).
+You can find the current default configuration [here](../prboom2/data/lumps/penghud.lmp).
 
 ## `Full` Variant Specification
 
@@ -71,7 +72,7 @@ doom full 5 "boom classic"
 health_text 2 8 bottom_left 1
 ```
 
-By default Nyan Doom comes with a NYANHUD with multiple huds *(~5 or 6 depending on game type)*. If you would like to limit the amount of default huds, you can use the command `clearhud` in the full hud defintion.
+By default Penguino Doom comes with a PENGHUD with multiple huds *(~5 or 6 depending on game type)*. If you would like to limit the amount of default huds, you can use the command `clearhud` in the full hud defintion.
 
 Here's an example of a `full` cleared hud:
 ```
@@ -79,7 +80,7 @@ doom full 2 "modern"
 clearhud
 ```
 
-## NYANHUD Components
+## PENGHUD Components
 
 Unless otherwise specified, argument values are integers. For toggles, a 1 means on and a 0 means off. For example, `stat_totals 2 8 bottom_left 1 0 1` would turn off items but keep kills and secrets enabled.
 
@@ -198,7 +199,7 @@ Unless otherwise specified, argument values are integers. For toggles, a 1 means
 - `map_time`: shows the level / total time
   - Uses the message font
   - Supports 2 arguments: `always_show_total show_labels`
-    - 😸 `always_show_total`: always show the total time
+    - 🐧 `show_total`: never show total time (0), show total only when continuing from a previous level (1), always show total (2)
     - 😸 `show_labels`: shows the "M" "T" labels
 - `map_coordinates`: shows the player's position
   - Uses the message font
@@ -232,7 +233,7 @@ Unless otherwise specified, argument values are integers. For toggles, a 1 means
   - Requires menu option "announce message" to be set to "on"
   - Supports 2 arguments: `center show_author`
     - `center`: centers the component horizontally
-    - `show_author` doesn't show author (0), shows author when given (1), always show author message (2)
+    - 🐧 `show_author` doesn't show author (0), shows author when known (1), always show author message (2)
 
 ### Stats
 - `stat_totals`: shows the kills / secrets / items on the current map

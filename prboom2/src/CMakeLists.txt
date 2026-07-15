@@ -582,7 +582,7 @@ set(EXTRA_FILES
     r_drawflush.inl
 )
 
-set(NYAN_SOURCES
+set(PENGUINO_SOURCES
     ${COMMON_SRC}
     ${NET_CLIENT_SRC}
     ${WAD_SRC}
@@ -631,10 +631,10 @@ function(AddGameExecutable TARGET SOURCES)
 
     add_executable(${TARGET} WIN32 ${SOURCES})
 
-    nyan_target_set_warnings(${TARGET})
-    nyan_target_silence_deprecation(${TARGET})
-    nyan_target_enable_fast_math(${TARGET})
-    nyan_target_use_config_h(${TARGET})
+    penguino_target_set_warnings(${TARGET})
+    penguino_target_silence_deprecation(${TARGET})
+    penguino_target_enable_fast_math(${TARGET})
+    penguino_target_use_config_h(${TARGET})
 
     target_compile_features(${TARGET}
         PRIVATE
@@ -648,19 +648,19 @@ function(AddGameExecutable TARGET SOURCES)
 
     target_link_libraries(${TARGET}
         PRIVATE
-        nyan::dependencies
+        penguino::dependencies
     )
 
     set_target_properties(${TARGET} PROPERTIES
-        RUNTIME_OUTPUT_DIRECTORY ${NYAN_OUTPUT_PATH}
+        RUNTIME_OUTPUT_DIRECTORY ${PENGUINO_OUTPUT_PATH}
         C_STANDARD 99
     )
 
-    add_dependencies(${TARGET} nyan-doom-wad)
+    add_dependencies(${TARGET} penguino-doom-wad)
     add_custom_command(TARGET ${TARGET}
         POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E echo "Copying ${WAD_DATA_PATH} to $<TARGET_FILE_DIR:nyan-doom>"
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different ${WAD_DATA_PATH} $<TARGET_FILE_DIR:nyan-doom>
+        COMMAND ${CMAKE_COMMAND} -E echo "Copying ${WAD_DATA_PATH} to $<TARGET_FILE_DIR:penguino-doom>"
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different ${WAD_DATA_PATH} $<TARGET_FILE_DIR:penguino-doom>
     )
 
     if(MSVC)
@@ -668,7 +668,7 @@ function(AddGameExecutable TARGET SOURCES)
             LINK_FLAGS "/MANIFEST:NO /SUBSYSTEM:CONSOLE"
         )
         add_custom_command(TARGET ${TARGET} POST_BUILD
-            COMMAND "mt.exe" -manifest \"${CMAKE_CURRENT_SOURCE_DIR}\\..\\ICONS\\nyan-doom.exe.manifest\" -outputresource:\"$<TARGET_FILE:nyan-doom>\"\;\#1
+            COMMAND "mt.exe" -manifest \"${CMAKE_CURRENT_SOURCE_DIR}\\..\\ICONS\\penguino-doom.exe.manifest\" -outputresource:\"$<TARGET_FILE:penguino-doom>\"\;\#1
         )
     elseif(WIN32)
         set_target_properties(${TARGET} PROPERTIES
@@ -686,11 +686,11 @@ function(AddGameExecutable TARGET SOURCES)
                 PRE_EXCLUDE_REGEXES "api-ms-" "ext-ms-"
                 POST_EXCLUDE_REGEXES ".*system32/.*\\.dll"
                 DIRECTORIES $<TARGET_FILE_DIR:${TARGET}> $ENV{PATH}
-            RUNTIME DESTINATION "${NYAN_INSTALL_BINDIR}"
+            RUNTIME DESTINATION "${PENGUINO_INSTALL_BINDIR}"
         )
     else()
-        install(TARGETS ${TARGET} RUNTIME DESTINATION "${NYAN_INSTALL_BINDIR}")
+        install(TARGETS ${TARGET} RUNTIME DESTINATION "${PENGUINO_INSTALL_BINDIR}")
     endif()
 endfunction()
 
-AddGameExecutable(nyan-doom "${NYAN_SOURCES}")
+AddGameExecutable(penguino-doom "${PENGUINO_SOURCES}")

@@ -1,10 +1,10 @@
-# Building Nyan-Doom on macOS
+# Building Penguino Doom on macOS
 
-This is a basic guide for making a release build of Nyan Doom on macOS using tools and libraries from brew.
+This is a basic guide for making a release build of Penguino Doom on macOS using tools and libraries from brew.
 
 ## Prerequisites
 
-In order to build Nyan Doom, the following tools are needed:
+In order to build Penguino Doom, the following tools are needed:
 - Xcode's Command Line Tools, installed by running `xcode-select --install` from a terminal.
 - The Homebrew package manager, refer to [this page](https://brew.sh/) for installation.
 
@@ -12,8 +12,8 @@ This guide assumes all the commands are ran from the root directory of the repos
 directory after cloning the sources:
 
 ```
-git clone https://github.com/andrikpowell/nyan-doom.git
-cd nyan-doom
+git clone https://github.com/CoderPenguin1-dev/penguino-doom.git
+cd penguino-doom
 ```
 
 ## Installing Dependencies
@@ -26,7 +26,7 @@ brew bundle
 
 ## Building
 
-Nyan Doom is built using CMake. The project first needs to be configured:
+Penguino Doom is built using CMake. The project first needs to be configured:
 
 ```
 cmake -S prboom2 -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON
@@ -40,7 +40,7 @@ cmake --build build
 
 ## Installing
 
-Nyan Doom can be installed system-wide by running the following command:
+Penguino Doom can be installed system-wide by running the following command:
 ```
 cmake --install build
 ```
@@ -58,4 +58,4 @@ cd build
 cpack -G External
 ```
 
-This will generate a file called `nyan-doom-x.y.z-Darwin.zip` (where `x.y.z` corresponds to the current version).
+This will generate a file called `penguino-doom-x.y.z-Darwin.zip` (where `x.y.z` corresponds to the current version).
