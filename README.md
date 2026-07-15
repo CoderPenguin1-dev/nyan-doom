@@ -1,4 +1,5 @@
 <div align="center" markdown="1">
+    <a href="https://github.com/CoderPenguin1-dev/penguino-doom/"><img src="./prboom2/ICONS/penguino-doom.svg" alt="Penguino Doom Logo" width="300"/></a>
     <h1>Penguino Doom</h1>
     <h3>The second most feathery, cuddly Doom port ever!</h3>
 </div>
