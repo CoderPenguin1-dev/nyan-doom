@@ -1,8 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
-  "name": "nyan-doom",
-  "version": "1.5.4",
-  "homepage": "https://github.com/andrikpowell/nyan-doom",
+  "name": "penguino-doom",
+  "version": "1.0.0",
+  "homepage": "https://github.com/CoderPenguin1-dev/penguino-doom",
   "license": "GPL-2.0-only",
   "dependencies": [
     "libsndfile",
