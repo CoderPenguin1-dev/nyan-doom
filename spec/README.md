@@ -1,8 +1,8 @@
-# nyan-doom spec files
+# penguino-doom spec files
 How to run the specs:
 
 1) Put `DOOM2.WAD`, `DOOM.WAD`, `HERETIC.WAD`, `HEXEN.WAD`, `Valiant.wad`, and `rush.wad` in `spec/support/wads`.
-2) Build nyan-doom in `build`.
+2) Build penguino-doom in `build`.
 3) Install ruby.
 4) Install rspec with `gem install rspec`.
 5) Run `rspec` in the root directory.

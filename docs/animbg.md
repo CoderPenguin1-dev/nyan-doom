@@ -1,6 +1,6 @@
 # Animated Background and Menu Support
 
-Nyan Doom supports new animated background and menu graphics via specific lumps.
+Penguino Doom supports new animated background and menu graphics via specific lumps.
 
 Only when both `start` and `end` animation lumps are present for a single entry, will those animation lumps take priority over the `original` lumps. Any lumps in-between the `start` and `end` lumps will also be included in the animation. Animations run at the same speed as the Menu Selector (`M_SKULL1/2`).
 
@@ -44,7 +44,7 @@ The `start` lumps should be placed *above* or *before* the `end` lumps in the WA
 | HELP99         | S_HELP99                | E_HELP99                |
 
 ### Animated UMAPINFO Patches
-Nyan Doom automatically truncates strings larger than 6 characters to fit the prefix `S_` or `E_` in the 8 character limit. Strings under than 6 characters won't be truncated.
+Penguino Doom automatically truncates strings larger than 6 characters to fit the prefix `S_` or `E_` in the 8 character limit. Strings under than 6 characters won't be truncated.
 
 | UMAPINFO KEY   | Example        | Start Example           | End Example             |
 |----------------|----------------|-------------------------|-------------------------|
