@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
   "name": "penguino-doom",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "homepage": "https://github.com/CoderPenguin1-dev/penguino-doom",
   "license": "GPL-2.0-only",
   "dependencies": [
