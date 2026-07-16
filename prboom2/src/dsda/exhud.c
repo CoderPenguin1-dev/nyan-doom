@@ -98,6 +98,7 @@ typedef enum {
   exhud_map_title,
   exhud_map_totals,
   exhud_minimap,
+  exhud_player_speed,
   exhud_component_count,
 } exhud_component_id_t;
 
@@ -417,6 +418,12 @@ exhud_component_t components_template[exhud_component_count] = {
     "minimap",
     .default_vpt = VPT_EX_TEXT,
     .off_by_default = true,
+  },
+  [exhud_player_speed] = {
+    penguino_InitPlayerSpeedHC,
+    penguino_UpdatePlayerSpeedHC,
+    penguino_DrawPlayerSpeedHC,
+    "player_speed",
   },
 };
 

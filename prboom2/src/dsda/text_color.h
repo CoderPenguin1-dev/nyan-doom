@@ -115,6 +115,8 @@ enum {
   dsda_tc_exhud_status_speed,
   dsda_tc_exhud_status_maulotaur,
   dsda_tc_exhud_status_blink,
+  penguino_tc_exhud_player_speed_label,
+  penguino_tc_exhud_player_speed,
   dsda_tc_hud_message,
   dsda_tc_hud_announce_message,
   dsda_tc_hud_announce_author,

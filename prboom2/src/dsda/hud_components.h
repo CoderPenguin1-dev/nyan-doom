@@ -60,3 +60,4 @@
 #include "hud_components/target_health.h"
 #include "hud_components/tracker.h"
 #include "hud_components/weapon_text.h"
+#include "hud_components/player_speed.h"
