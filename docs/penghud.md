@@ -171,6 +171,7 @@ Unless otherwise specified, argument values are integers. For toggles, a 1 means
 - `speed_text`: shows the game clock rate
   - Supports 1 argument: `show_label`
     - `show_label`: shows the "speed" label
+- 🐧 `player_speed`: shows the player's speed
 - `command_display`: shows the history of player commands (demo or otherwise)
 - `coordinate_display`: shows various coordinate and velocity data
 - `event_split`: shows the time of an event tracked by the `-time_*` arguments
