@@ -2217,6 +2217,10 @@ dsda_config_t dsda_config[dsda_config_count] = {
   [penguino_config_map_only_important] = {
     "penguino_config_map_only_important", penguino_config_map_only_important,
     CONF_BOOL(0)
+  },
+  [penguino_config_show_player_speed] = {
+    "penguino_config_show_player_speed", penguino_config_show_player_speed,
+    CONF_BOOL(0), NULL, NOT_STRICT, penguino_RefreshExHudPlayerSpeed
   }
 };
 

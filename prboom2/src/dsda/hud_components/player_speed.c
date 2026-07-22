@@ -58,7 +58,7 @@ void penguino_InitPlayerSpeedHC(int x_offset, int y_offset, int vpt, int* args, 
   local = *data;
   snprintf(local->label, sizeof(local->label), "%sPLAYER SPEED ", dsda_TextColor(penguino_tc_exhud_player_speed_label));
 
-  dsda_InitBlockyHC(&local->component, x_offset, y_offset, vpt);
+  dsda_InitTextHC(&local->component, x_offset, y_offset, vpt);
 }
 
 void penguino_UpdatePlayerSpeedHC(void* data) {
@@ -71,5 +71,5 @@ void penguino_UpdatePlayerSpeedHC(void* data) {
 void penguino_DrawPlayerSpeedHC(void* data) {
   local = data;
 
-  dsda_DrawBasicShadowedText(&local->component);
+  dsda_DrawBasicText(&local->component);
 }

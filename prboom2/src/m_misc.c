@@ -491,6 +491,7 @@ cfg_def_t cfg_defs[] =
   SETTING_HEADING("Penguino Settings"),
   MIGRATED_SETTING(penguino_config_invuln_cm),
   MIGRATED_SETTING(penguino_config_highlight_peng_features),
+  MIGRATED_SETTING(penguino_config_show_player_speed),
 
   SETTING_HEADING("Extended HUD Status Icons Widget"),
   MIGRATED_SETTING(nyan_config_ex_status_widget),

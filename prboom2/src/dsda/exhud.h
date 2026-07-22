@@ -40,5 +40,6 @@ void dsda_RefreshMapCoordinates(void);
 void dsda_RefreshMapTotals(void);
 void dsda_RefreshMapTime(void);
 void dsda_RefreshMapTitle(void);
+void penguino_RefreshExHudPlayerSpeed(void);
 
 #endif

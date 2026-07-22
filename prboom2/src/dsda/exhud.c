@@ -424,6 +424,8 @@ exhud_component_t components_template[exhud_component_count] = {
     penguino_UpdatePlayerSpeedHC,
     penguino_DrawPlayerSpeedHC,
     "player_speed",
+    .default_vpt = VPT_EX_TEXT | VPT_EX_TRANS,
+    .off_by_default = true,
   },
 };
 
@@ -956,6 +958,7 @@ static void dsda_RefreshHUD(void) {
   dsda_RefreshExHudFreeText();
   dsda_RefreshExHudStatusWidget();
   dsda_RefreshExHudTimerWidget();
+  penguino_RefreshExHudPlayerSpeed();
   dsda_RefreshMapCoordinates();
   dsda_RefreshMapTotals();
   dsda_RefreshMapTime();
@@ -1118,6 +1121,11 @@ static void dsda_BasicMapRefresh(dboolean (*show_component)(void), exhud_compone
 
 dboolean dsda_CheckExHudKeys(void) {
   return (!dsda_HideHUD() && (components[exhud_keys].on == true));
+}
+
+void penguino_RefreshExHudPlayerSpeed(void)
+{
+  dsda_BasicRefresh(penguino_ShowPlayerSpeed, exhud_player_speed);
 }
 
 void dsda_RefreshExHudFPS(void) {

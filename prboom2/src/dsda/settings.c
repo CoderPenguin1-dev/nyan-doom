@@ -449,6 +449,11 @@ dboolean dsda_PlayQuitSounds(void) {
   return dsda_IntConfig(dsda_config_quit_sounds) && !raven;
 }
 
+dboolean penguino_ShowPlayerSpeed(void)
+{
+  return dsda_IntConfig(penguino_config_show_player_speed);
+}
+
 int dsda_reveal_map;
 
 int dsda_RevealAutomap(void) {

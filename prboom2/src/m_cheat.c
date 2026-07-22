@@ -164,6 +164,7 @@ static void cheat_reveal_lockx(char *buf);
 // penguino
 static void cheat_reset();
 static void cheat_fps();
+static void cheat_speed();
 
 //-----------------------------------------------------------------------------
 //
@@ -329,6 +330,7 @@ cheatseq_t cheat[] = {
   CHEAT("reset", NULL, NULL, not_demo, cht_any, cheat_reset, 0, false),
   CHEAT("idclev00", NULL, NULL, not_demo, cht_doom, cheat_reset, 0, false), // DOOM-specific alias to reset
   CHEAT("showfps", NULL, NULL, cht_always, cht_any, cheat_fps, 0, false),
+  CHEAT("speed", NULL, NULL, cht_always, cht_any, cheat_speed, 0, false),
   
   // end-of-list marker
   {NULL}
@@ -1226,6 +1228,12 @@ static void cheat_fps(void)
 {
   dsda_AddMessage(dsda_ToggleConfig(dsda_config_show_fps, false) ? "FPS On"
                                                                  : "FPS Off");
+}
+
+static void cheat_speed(void)
+{
+  dsda_AddMessage(dsda_ToggleConfig(penguino_config_show_player_speed, false) ? "Player Speed On"
+                                                                              : "Player Speed Off");
 }
 
 // Exit finder [Based on Nugget cheat]

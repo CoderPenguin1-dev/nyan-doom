@@ -513,6 +513,7 @@ enum {
   penguino_config_invuln_cm,
   penguino_config_highlight_peng_features,
   penguino_config_map_only_important,
+  penguino_config_show_player_speed,
   dsda_config_count,
 };
 

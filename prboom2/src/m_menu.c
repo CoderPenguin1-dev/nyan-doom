@@ -5020,6 +5020,8 @@ setup_menu_t gen_nyan_settings[] = {
 };
 
 setup_menu_t gen_penguino_settings[] = {
+  { "Show Player Speed", S_YESNO | S_PENG, m_conf, g_all, G2_X, penguino_config_show_player_speed },
+  EMPTY_LINE,
   { "Highlight Penguino Features", S_YESNO | S_PENG_HILITE, m_conf, g_all, G2_X, penguino_config_highlight_peng_features },
 
   PREV_PAGE(gen_nyan_settings),
