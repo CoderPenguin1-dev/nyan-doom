@@ -1122,6 +1122,7 @@ dboolean dsda_CheckExHudKeys(void) {
 
 void dsda_RefreshExHudFPS(void) {
   dsda_BasicRefresh(dsda_ShowFPS, exhud_fps);
+  dsda_BasicMapRefresh(dsda_ShowFPS, exhud_fps);
 }
 
 void dsda_RefreshExHudMinimap(void) {

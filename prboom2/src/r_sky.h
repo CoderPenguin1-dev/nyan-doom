@@ -50,6 +50,10 @@ extern fixed_t freelookviewheight;
 
 /* Called whenever the view size changes. */
 void R_InitSkyMap(void);
+
 // Called when using the Invuln Effect setting.
 void R_ChangeSkyCM(void);
+
+byte R_GetSkyColor(int texturenum);
+
 #endif
