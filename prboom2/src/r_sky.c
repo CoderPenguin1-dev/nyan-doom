@@ -242,6 +242,8 @@ void R_InitSkyMap(void)
       skytexturemid = 100*FRACUNIT;
     }
   }
+
+  R_ChangeSkyCM();
 }
 
 // Called when using the Invuln Effect setting.
