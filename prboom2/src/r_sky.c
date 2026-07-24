@@ -50,6 +50,7 @@
 #include "dsda/mapinfo.h"
 #include "dsda/palette.h"
 #include "dsda/settings.h"
+#include "dsda/options.h"
 
 //
 // sky mapping
@@ -253,6 +254,5 @@ void R_ChangeSkyCM()
   if (invuln_cm != 0)
     comp[comp_skymap] = invuln_cm - 1;
   else
-    comp[comp_skymap] = compatibility_level >= 11 ? 0 : 1;
-
+    comp[comp_skymap] = dsda_Options()->comp_skymap;
 }
